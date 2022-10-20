@@ -1,0 +1,35 @@
+nav {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #21222a;
+  /* position: absolute; */
+  width: 550px;
+  height: 91px;
+  left: 0px;
+  top: 0px;
+}
+
+.nav--container {
+  display: flex;
+  align-items: center;
+  color: #61dafb;
+  font-weight: 700;
+  font-size: 22.25px;
+}
+
+.nav--text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: right;
+  height: 21px;
+  width: 259px;
+  color: #deebf8;
+}
+
+.nav--react-facts {
+  margin-left: 5px;
+}

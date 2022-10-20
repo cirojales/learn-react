@@ -1,0 +1,24 @@
+/* * {
+  border: 1px solid black;
+} */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+#root {
+  font-family: "Inter", sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

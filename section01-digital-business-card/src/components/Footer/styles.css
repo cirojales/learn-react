@@ -1,0 +1,16 @@
+.footer {
+  background-color: #161619;
+  width: 317px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+}
+
+.footer__icon-wrapper {
+  margin-top: 2px;
+  width: 247px;
+  display: flex;
+  justify-content: space-between;
+}

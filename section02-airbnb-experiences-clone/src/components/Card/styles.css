@@ -1,0 +1,69 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 176px;
+  background-color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+.card__rating {
+  margin-top: 3px;
+  font-weight: 300;
+}
+
+.card__rating > * {
+  margin-right: 3px;
+}
+
+.card__rating__rating-qty {
+  margin-right: 1px;
+}
+
+.card__rating__divider {
+  margin-right: 3px;
+}
+
+.card__description {
+  font-weight: 300;
+  line-height: 110%;
+}
+
+.card__rating__location,
+.card__rating__rating-qty {
+  color: #918e9b;
+}
+
+.card__price--bold {
+  font-weight: bold;
+}
+
+.card__wrapper__status {
+  background-color: #ffffff;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 5px 7px;
+  font-weight: 400;
+  font-size: 10.24px;
+  line-height: 100%;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; */
+  /* vertical-align: middle; */
+}
+
+.card__wrapper {
+  position: relative;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__info > * {
+  margin-bottom: 6px;
+}

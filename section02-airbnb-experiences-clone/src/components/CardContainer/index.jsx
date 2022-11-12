@@ -9,7 +9,7 @@ export default function CardContainer() {
       <Card
         image={katieZaferes}
         rating="5.0"
-        ratingQty="6"
+        reviewCount="6"
         location="USA"
         description="Life lessons with Katie Zaferes"
         price="136"

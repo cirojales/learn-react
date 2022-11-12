@@ -16,7 +16,9 @@ export default function Card(props) {
         <span className="card__rating">
           <img className="card__star-icon" src={starIcon} alt="" />
           <span className="card__rating__rating">{props.rating}</span>
-          <span className="card__rating__rating-qty">({props.ratingQty})</span>
+          <span className="card__rating__rating-qty">
+            ({props.reviewCount})
+          </span>
           <span className="card__rating__divider">·</span>
           <span className="card__rating__location">{props.location}</span>
         </span>

@@ -1,4 +1,4 @@
-export default [
+let data = [
   {
     id: 1,
     title: "Life Lessons with Katie Zaferes",
@@ -10,9 +10,9 @@ export default [
       rating: 5.0,
       reviewCount: 6,
     },
-    location: "Online",
+    location: "USA",
     openSpots: 0,
-    status: "SOLD OUT",
+    isOnline: false,
   },
   {
     id: 2,
@@ -25,9 +25,9 @@ export default [
       rating: 5.0,
       reviewCount: 30,
     },
-    location: "Online",
+    location: "USA",
     openSpots: 27,
-    status: "ONLINE",
+    isOnline: true,
   },
   {
     id: 3,
@@ -40,8 +40,10 @@ export default [
       rating: 4.8,
       reviewCount: 2,
     },
-    location: "Norway",
+    location: "USA",
     openSpots: 3,
-    status: "",
+    isOnline: false,
   },
 ];
+
+export default data;

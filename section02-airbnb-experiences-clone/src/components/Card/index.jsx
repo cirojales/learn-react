@@ -22,7 +22,7 @@ export default function Card(props) {
           <span className="card__rating__divider">·</span>
           <span className="card__rating__location">{props.location}</span>
         </span>
-        <span className="card__description">{props.description}</span>
+        <span className="card__title">{props.title}</span>
         <span className="card__price">
           <span className="card__price--bold">From ${props.price}</span> /
           person

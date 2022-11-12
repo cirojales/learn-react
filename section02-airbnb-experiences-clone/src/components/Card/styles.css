@@ -25,9 +25,10 @@
   margin-right: 3px;
 }
 
-.card__description {
+.card__title {
   font-weight: 300;
   line-height: 110%;
+  width: 15em;
 }
 
 .card__rating__location,

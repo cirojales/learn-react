@@ -4,4 +4,10 @@
   width: 550px;
   padding-left: 37px;
   border-radius: 0 0 8.95px 8.95px;
+  display: flex;
+  overflow: hidden;
+}
+
+.card-container > * + * {
+  margin-left: 1.6em;
 }

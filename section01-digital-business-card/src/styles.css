@@ -6,10 +6,15 @@
 
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(215, 203, 203);
 }
 
 #root {
   font-family: "Inter", sans-serif;
+  margin: auto;
 }

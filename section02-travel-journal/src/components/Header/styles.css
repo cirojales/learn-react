@@ -1,0 +1,23 @@
+nav {
+  background-color: #f55a5a;
+  width: 550px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav--icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav--text {
+  color: #ffffff;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 14.4608px;
+  line-height: 18px;
+  letter-spacing: -0.075em;
+  margin-left: 7px;
+}

@@ -3,7 +3,7 @@ let data = [
     id: 1,
     title: "Mount Fuji",
     location: "Japan",
-    googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
+    googleMapsUrl: "https://goo.gl/maps/QSbVqYaYUGsJpm4w9",
     startDate: "12 Jan, 2021",
     endDate: "24 Jan, 2021",
     description:
@@ -14,7 +14,7 @@ let data = [
     id: 2,
     title: "Sydney Opera House",
     location: "Australia",
-    googleMapsUrl: "https://goo.gl/maps/RLo84S7E3y1zaADA8",
+    googleMapsUrl: "https://goo.gl/maps/Hv15ejTcf1N8gYAd9",
     startDate: "27 May, 2021",
     endDate: "8 Jun, 2021",
     description:
@@ -25,7 +25,7 @@ let data = [
     id: 3,
     title: "Geirangerfjord",
     location: "Norway",
-    googleMapsUrl: "https://goo.gl/maps/RYg4Ye7HcKdNmGr4A",
+    googleMapsUrl: "https://goo.gl/maps/9Ax2Ur8afGzhrst1A",
     startDate: "01 Oct, 2021",
     endDate: "18 Nov, 2021",
     description:

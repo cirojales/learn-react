@@ -1,0 +1,44 @@
+.header {
+  background: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.4em;
+  width: 550px;
+  height: 65px;
+  color: #ffffff;
+}
+
+.left-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.right-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header--trollface {
+  width: 31px;
+  height: 26px;
+  margin-right: 0.5em;
+}
+
+.header--title {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 24px;
+  letter-spacing: -0.1em;
+}
+
+.header--text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+}

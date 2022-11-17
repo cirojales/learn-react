@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: rgb(0, 0, 0);
 }
 
 #root {
@@ -19,4 +20,5 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: white;
 }

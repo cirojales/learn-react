@@ -15,7 +15,7 @@ body {
 }
 
 #root {
-  margin: 0 auto;
+  margin: auto;
   width: 550px;
   display: flex;
   justify-content: center;

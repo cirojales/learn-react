@@ -15,5 +15,8 @@ body {
 
 #root {
   margin: 0 auto;
-  border: solid 1px black;
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }

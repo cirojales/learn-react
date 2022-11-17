@@ -1,0 +1,12 @@
+.form {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em 1.5em;
+}
+
+.line {
+  width: 47%;
+  border: 1.5px solid #d5d4d8;
+  border-radius: 5px;
+  font-size: 1.6rem;
+}

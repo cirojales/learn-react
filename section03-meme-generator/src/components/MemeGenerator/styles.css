@@ -22,7 +22,7 @@
 .inputs-container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  gap: 3%;
 }
 
 .link {

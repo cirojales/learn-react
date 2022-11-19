@@ -20,7 +20,7 @@
   font-family: inherit;
 }
 
-.meme-generator__wrapper {
+.meme-generator__input-wrapper {
   width: 100%;
   display: flex;
   gap: 3%;
@@ -40,7 +40,36 @@
   border: none;
 }
 
+.meme-generator__image-wrapper {
+  position: relative;
+}
 .meme-generator__meme {
   width: 100%;
   margin: 2em 0 1em;
+}
+
+.meme-generator__top-line
+/* .meme-generator__bottom-line  */ {
+  font-family: Impact, sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #fff;
+  line-height: 2.1em;
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  text-transform: uppercase;
+}
+
+.meme-generator__bottom-line
+/* .meme-generator__bottom-line  */ {
+  font-family: Impact, sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  color: #fff;
+  line-height: 2.1em;
+  position: absolute;
+  left: 21%;
+  bottom: 6%;
+  text-transform: uppercase;
 }

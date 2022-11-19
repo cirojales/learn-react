@@ -1,25 +1,51 @@
 import React from "react";
+import { useState } from "react";
 import "./styles.css";
-import meme from "../../assets/meme.svg";
+import memesData from "../../memesData";
 
 export default function MemeGenerator() {
-  function test(e) {
-    e.preventDefault();
-    console.log(777);
+  const [url, setUrl] = useState("https://i.imgflip.com/3si4.jpg");
+  const [topLine, setTopLine] = useState("Shut up");
+  const [bottomLine, setBottomLine] = useState("and take my money");
+
+  function getMemeImage(event) {
+    event.preventDefault();
+    const memesArray = memesData.data.memes;
+    const randomNumber = Math.floor(Math.random() * memesArray.length);
+    return memesArray[randomNumber].url;
   }
+
   return (
     <main className="meme-generator">
       <form action="" className="meme-generator__form">
-        <div className="meme-generator__wrapper">
-          <input type="text" className="meme-generator__line" />
-          <input type="text" className="meme-generator__line" />
+        <div className="meme-generator__input-wrapper">
+          <input
+            type="text"
+            defaultValue={topLine}
+            className="meme-generator__line"
+          />
+          <input
+            type="text"
+            defaultValue={bottomLine}
+            className="meme-generator__line"
+          />
         </div>
         {/* eslint-disable-next-line */}
-        <button className="meme-generator__btn" onClick={test}>
+        <button
+          onClick={(event) => setUrl(getMemeImage(event))}
+          className="meme-generator__btn"
+        >
           Get a new meme image
         </button>
       </form>
-      <img className="meme-generator__meme" src={meme} alt="" />
+      <div
+        // style={{ backgroundImage: `url(${url})` }}
+        className="meme-generator__image-wrapper"
+      >
+        <img className="meme-generator__meme" alt="" src={url} />
+        <span className="meme-generator__top-line">{topLine}</span>
+        <span className="meme-generator__bottom-line">{bottomLine}</span>
+      </div>
     </main>
   );
 }

@@ -8,16 +8,24 @@ export default function MemeGenerator() {
   const [topLine, setTopLine] = useState("Shut up");
   const [bottomLine, setBottomLine] = useState("and take my money");
 
-  function getMemeImage(event) {
-    event.preventDefault();
+  function getMemeImage(e) {
+    // e.preventDefault();
     const memesArray = memesData.data.memes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
     return memesArray[randomNumber].url;
   }
 
+  function getInputValue(e) {
+    e.preventDefault();
+    const topLineValue = e.target.children[0].childNodes[0].value;
+    const bottomLineValue = e.target.children[0].childNodes[1].value;
+    setTopLine(topLineValue);
+    setBottomLine(bottomLineValue);
+  }
+
   return (
     <main className="meme-generator">
-      <form action="" className="meme-generator__form">
+      <form onSubmit={getInputValue} action="" className="meme-generator__form">
         <div className="meme-generator__input-wrapper">
           <input
             type="text"
@@ -30,18 +38,16 @@ export default function MemeGenerator() {
             className="meme-generator__line"
           />
         </div>
-        {/* eslint-disable-next-line */}
         <button
-          onClick={(event) => setUrl(getMemeImage(event))}
+          onClick={() => setUrl(getMemeImage())}
+          // type="submit"
           className="meme-generator__btn"
         >
+          {/* eslint-disable-next-line */}
           Get a new meme image
         </button>
       </form>
-      <div
-        // style={{ backgroundImage: `url(${url})` }}
-        className="meme-generator__image-wrapper"
-      >
+      <div className="meme-generator__image-wrapper">
         <img className="meme-generator__meme" alt="" src={url} />
         <span className="meme-generator__top-line">{topLine}</span>
         <span className="meme-generator__bottom-line">{bottomLine}</span>

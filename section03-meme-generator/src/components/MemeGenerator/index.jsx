@@ -3,19 +3,23 @@ import "./styles.css";
 import meme from "../../assets/meme.svg";
 
 export default function MemeGenerator() {
+  function test(e) {
+    e.preventDefault();
+    console.log(777);
+  }
   return (
-    <section className="meme-generator">
-      <form action="" className="form">
-        <div className="inputs-container">
-          <input type="text" className="line form--top-line" />
-          <input type="text" className="line form--bottom-line" />
+    <main className="meme-generator">
+      <form action="" className="meme-generator__form">
+        <div className="meme-generator__wrapper">
+          <input type="text" className="meme-generator__line" />
+          <input type="text" className="meme-generator__line" />
         </div>
         {/* eslint-disable-next-line */}
-        <a className="link" href="">
+        <button className="meme-generator__btn" onClick={test}>
           Get a new meme image
-        </a>
+        </button>
       </form>
-      <img className="meme" src={meme} alt="" />
-    </section>
+      <img className="meme-generator__meme" src={meme} alt="" />
+    </main>
   );
 }

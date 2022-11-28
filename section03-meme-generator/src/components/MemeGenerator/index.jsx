@@ -9,23 +9,15 @@ export default function MemeGenerator() {
   const [bottomLine, setBottomLine] = useState("and take my money");
 
   function getMemeImage(e) {
-    // e.preventDefault();
+    e.preventDefault();
     const memesArray = memesData.data.memes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
-    return memesArray[randomNumber].url;
-  }
-
-  function getInputValue(e) {
-    e.preventDefault();
-    const topLineValue = e.target.children[0].childNodes[0].value;
-    const bottomLineValue = e.target.children[0].childNodes[1].value;
-    setTopLine(topLineValue);
-    setBottomLine(bottomLineValue);
+    setUrl(memesArray[randomNumber].url);
   }
 
   return (
     <main className="meme-generator">
-      <form onSubmit={getInputValue} action="" className="meme-generator__form">
+      <form action="" className="meme-generator__form">
         <div className="meme-generator__input-wrapper">
           <input
             type="text"
@@ -38,11 +30,7 @@ export default function MemeGenerator() {
             className="meme-generator__line"
           />
         </div>
-        <button
-          onClick={() => setUrl(getMemeImage())}
-          // type="submit"
-          className="meme-generator__btn"
-        >
+        <button onClick={getMemeImage} className="meme-generator__btn">
           {/* eslint-disable-next-line */}
           Get a new meme image
         </button>

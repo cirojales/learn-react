@@ -41,7 +41,9 @@
 }
 
 .meme-generator__image-wrapper {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 .meme-generator__meme {
   width: 100%;
@@ -50,26 +52,22 @@
 
 .meme-generator__top-line
 /* .meme-generator__bottom-line  */ {
+  width: 100%;
   font-family: Impact, sans-serif;
   font-weight: 900;
   font-size: 2rem;
-  color: #fff;
+  color: black;
   line-height: 2.1em;
-  position: absolute;
-  left: 40%;
-  top: 10%;
   text-transform: uppercase;
 }
 
 .meme-generator__bottom-line
 /* .meme-generator__bottom-line  */ {
+  width: 100%;
   font-family: Impact, sans-serif;
   font-weight: 900;
   font-size: 2rem;
-  color: #fff;
+  color: black;
   line-height: 2.1em;
-  position: absolute;
-  left: 21%;
-  bottom: 6%;
   text-transform: uppercase;
 }

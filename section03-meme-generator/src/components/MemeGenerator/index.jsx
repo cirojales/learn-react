@@ -4,15 +4,31 @@ import "./styles.css";
 import memesData from "../../memesData";
 
 export default function MemeGenerator() {
-  const [url, setUrl] = useState("https://i.imgflip.com/3si4.jpg");
-  const [topLine, setTopLine] = useState("Shut up");
-  const [bottomLine, setBottomLine] = useState("and take my money");
+  const [meme, setMeme] = useState({
+    topText: "Shut up",
+    bottomText: "and take my money",
+    randomImage: "https://i.imgflip.com/3si4.jpg",
+  });
 
-  function getMemeImage(e) {
-    e.preventDefault();
+  function getMemeImage(event) {
+    event.preventDefault();
     const memesArray = memesData.data.memes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
-    setUrl(memesArray[randomNumber].url);
+    setMeme((previousMeme) => ({
+      ...previousMeme,
+      topText: "",
+      bottomText: "",
+      randomImage: memesArray[randomNumber].url,
+    }));
+  }
+
+  function handleTextChange(event) {
+    event.preventDefault();
+    const { name, value } = event.target;
+    setMeme((previousMeme) => ({
+      ...previousMeme,
+      [name]: value,
+    }));
   }
 
   return (
@@ -21,13 +37,17 @@ export default function MemeGenerator() {
         <div className="meme-generator__input-wrapper">
           <input
             type="text"
-            defaultValue={topLine}
             className="meme-generator__line"
+            value={meme.topText}
+            name="topText"
+            onChange={handleTextChange}
           />
           <input
             type="text"
-            defaultValue={bottomLine}
             className="meme-generator__line"
+            value={meme.bottomText}
+            name="bottomText"
+            onChange={handleTextChange}
           />
         </div>
         <button onClick={getMemeImage} className="meme-generator__btn">
@@ -36,9 +56,9 @@ export default function MemeGenerator() {
         </button>
       </form>
       <div className="meme-generator__image-wrapper">
-        <img className="meme-generator__meme" alt="" src={url} />
-        <span className="meme-generator__top-line">{topLine}</span>
-        <span className="meme-generator__bottom-line">{bottomLine}</span>
+        <img className="meme-generator__meme" alt="" src={meme.randomImage} />
+        <span className="meme-generator__top-line">{meme.topText}</span>
+        <span className="meme-generator__bottom-line">{meme.bottomText}</span>
       </div>
     </main>
   );

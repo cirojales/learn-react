@@ -1,18 +1,26 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./styles.css";
-import memesData from "../../memesData";
 
 export default function MemeGenerator() {
+  const [memesArray, setMemesArray] = useState([]);
   const [meme, setMeme] = useState({
     topText: "Shut up",
     bottomText: "and take my money",
     randomImage: "https://i.imgflip.com/3si4.jpg",
   });
 
+  useEffect(() => {
+    (async () => {
+      const res = await fetch("https://api.imgflip.com/get_memes");
+      const data = await res.json();
+      setMemesArray(data.data.memes);
+      console.log(data.data.memes);
+    })();
+  }, []);
+
   function getMemeImage(event) {
     event.preventDefault();
-    const memesArray = memesData.data.memes;
     const randomNumber = Math.floor(Math.random() * memesArray.length);
     setMeme((previousMeme) => ({
       ...previousMeme,

@@ -57,8 +57,12 @@ export default function MemeGenerator() {
       </form>
       <div className="meme-generator__image-wrapper">
         <img className="meme-generator__meme" alt="" src={meme.randomImage} />
-        <span className="meme-generator__top-line">{meme.topText}</span>
-        <span className="meme-generator__bottom-line">{meme.bottomText}</span>
+        <span className="meme-generator__text meme-generator__text--top">
+          {meme.topText}
+        </span>
+        <span className="meme-generator__text meme-generator__text--bottom">
+          {meme.bottomText}
+        </span>
       </div>
     </main>
   );

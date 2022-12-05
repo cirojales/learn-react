@@ -20,12 +20,10 @@ main > h1 {
   line-height: 47px;
   letter-spacing: -0.05em;
   text-align: left;
-  /* color: #ffffff; */
 }
 
 main > ul {
   margin-left: 20px;
-  /* color: #ffffff; */
   font-size: 16px;
   font-weight: 400;
   line-height: 29px;

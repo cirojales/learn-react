@@ -1,10 +1,16 @@
 main {
-  background-color: #282d35;
+  background-color: #ffffff;
+  color: #282d35;
   padding-top: 40px;
   height: 459px;
   background-repeat: no-repeat;
   background-position: 100% 75%;
   width: 550px;
+}
+
+main.dark {
+  background-color: #282d35;
+  color: #ffffff;
 }
 
 main > h1 {
@@ -14,17 +20,18 @@ main > h1 {
   line-height: 47px;
   letter-spacing: -0.05em;
   text-align: left;
-  color: #ffffff;
+  /* color: #ffffff; */
 }
 
 main > ul {
   margin-left: 20px;
-  color: #ffffff;
+  /* color: #ffffff; */
   font-size: 16px;
   font-weight: 400;
   line-height: 29px;
   letter-spacing: 0em;
   text-align: left;
+  max-width: 70%;
 }
 
 ul li::marker {

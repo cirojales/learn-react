@@ -1,13 +1,20 @@
 nav {
+  background-color: #ffffff;
+  color: #21222a;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: space-around;
-  background-color: #21222a;
   width: 550px;
   height: 91px;
   left: 0px;
   top: 0px;
+  border-bottom: 1px solid #21222a;
+}
+
+nav.dark {
+  background-color: #21222a;
+  color: #ffffff;
 }
 
 .nav--container {
@@ -26,7 +33,6 @@ nav {
   text-align: right;
   height: 21px;
   width: 259px;
-  color: #deebf8;
 }
 
 .nav--react-facts {

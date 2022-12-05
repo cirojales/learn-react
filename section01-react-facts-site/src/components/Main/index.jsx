@@ -2,9 +2,12 @@ import React from "react";
 import "./styles.css";
 import image from "../../assets/Main/reactjs.svg";
 
-export default function Main() {
+export default function Main(props) {
   return (
-    <main style={{ backgroundImage: `url(${image})` }}>
+    <main
+      className={props.darkMode ? "dark" : ""}
+      style={{ backgroundImage: `url(${image})` }}
+    >
       <h1 className="main--title">Fun facts about React</h1>
       <ul>
         <li>Was first released in 2013</li>

@@ -38,3 +38,17 @@ ul li::marker {
   color: #61dafb;
   font-size: 1.5rem;
 }
+
+ul li::marker {
+  color: #282d35;
+  font-size: 1.5rem;
+}
+
+main.dark > ul li::marker {
+  color: #61dafb;
+  font-size: 1.5rem;
+}
+
+svg {
+  stroke: red;
+}

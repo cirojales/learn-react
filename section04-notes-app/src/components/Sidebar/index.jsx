@@ -2,20 +2,19 @@ import React from "react";
 import "./styles.css";
 
 export default function Sidebar(props) {
-  const noteElements = props.notes
-    .map((note, index) => {
-      return (
-        <h1
-          className={`sidebar__note ${
-            note.id === props.currentNoteId ? "sidebar__note--selected" : ""
-          }`}
-          onClick={() => props.setCurrentNoteId(note.id)}
-        >
-          Note {index + 1}
-        </h1>
-      );
-    })
-    .reverse();
+  const noteElements = props.notes.map((note, index) => {
+    return (
+      <h1
+        key={index}
+        className={`sidebar__note ${
+          note.id === props.currentNoteId ? "sidebar__note--selected" : ""
+        }`}
+        onClick={() => props.setCurrentNoteId(note.id)}
+      >
+        Note {index + 1}
+      </h1>
+    );
+  });
   return (
     <section className="sidebar">
       <div className="sidebar__header">

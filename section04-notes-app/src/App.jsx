@@ -4,12 +4,9 @@ import Split from "react-split";
 import Editor from "./components/Editor";
 
 export default function App() {
-  const [notes, setNotes] = useState([
-    // { id: 1, body: "Note 1" },
-    // { id: 2, body: "Note 2" },
-  ]);
+  const [notes, setNotes] = useState([]);
   const [currentNoteId, setCurrentNoteId] = useState(notes[0] ?? "");
-  console.log(currentNoteId);
+  console.log(notes);
 
   function createNewNote() {
     const newNote = {
@@ -21,6 +18,19 @@ export default function App() {
     });
     setCurrentNoteId(newNote.id);
   }
+
+  function updateNote(text) {
+    setNotes((previousNotes) =>
+      previousNotes.map((note) => {
+        return note.id === currentNoteId ? { ...note, body: text } : note;
+      })
+    );
+  }
+
+  function findCurrentNote() {
+    return notes.find((note) => note.id === currentNoteId);
+  }
+
   return (
     <>
       {notes.length > 0 ? (
@@ -31,7 +41,7 @@ export default function App() {
             setCurrentNoteId={setCurrentNoteId}
             currentNoteId={currentNoteId}
           />
-          <Editor />
+          <Editor updateNote={updateNote} currentNote={findCurrentNote()} />
         </Split>
       ) : (
         <div className="no-notes">

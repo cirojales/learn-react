@@ -28,8 +28,34 @@
 
 .sidebar__note {
   font-size: 0.8rem;
+  padding: 0.5em;
+}
+
+.sidebar__note--selected {
+  background-color: #4a4e74;
+  color: #ffffff;
 }
 
 .split {
   display: flex;
+}
+
+.no-notes {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.first-note-btn {
+  cursor: pointer;
+  background-color: #4a4e74;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 0.5rem;
 }

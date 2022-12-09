@@ -16,7 +16,7 @@ export default function Editor({ currentNote, updateNote }) {
   return (
     <section className="pane editor">
       <ReactMde
-        value={["w"]}
+        value={["# Type your markdown note's title here"]}
         onChange={updateNote}
         selectedTab={selectedTab}
         onTabChange={setSelectedTab}

@@ -1,0 +1,30 @@
+.sidebar {
+  padding: 0.5em;
+}
+
+.sidebar__header {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 1em;
+  align-items: center;
+}
+
+.sidebar__header__btn {
+  background-color: #4a4e74;
+  color: white;
+  border: none;
+  padding: 0.2em 0.4em;
+}
+
+.sidebar__header__btn:hover,
+.sidebar__header__btn:focus {
+  opacity: 0.75;
+}
+
+.sidebar__header__heading {
+  font-size: 1.2rem;
+}
+
+.sidebar__note {
+  font-size: 0.8rem;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Split from "react-split";
+import Editor from "./components/Editor";
 
 export default function App() {
   const [notes, setNotes] = useState([
@@ -20,8 +21,9 @@ export default function App() {
     });
   }
   return (
-    <Split sizes={[30, 70]}>
+    <Split sizes={[30, 70]} className="split">
       <Sidebar notes={notes} createNewNote={createNewNote} />
+      <Editor />
     </Split>
   );
 }

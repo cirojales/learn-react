@@ -1,6 +1,7 @@
 import React from "react";
 import ReactMde from "react-mde";
 import Showdown from "showdown";
+import "react-mde/lib/styles/css/react-mde-all.css";
 
 export default function Editor({ currentNote, updateNote }) {
   const [selectedTab, setSelectedTab] = React.useState("write");
@@ -15,14 +16,14 @@ export default function Editor({ currentNote, updateNote }) {
   return (
     <section className="pane editor">
       <ReactMde
-        value={["fsfsdf"]}
+        value={["w"]}
         onChange={updateNote}
         selectedTab={selectedTab}
         onTabChange={setSelectedTab}
         generateMarkdownPreview={(markdown) =>
           Promise.resolve(converter.makeHtml(markdown))
         }
-        minEditorHeight={80}
+        minEditorHeight={50}
         heightUnits="vh"
       />
     </section>

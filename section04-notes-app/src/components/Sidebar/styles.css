@@ -1,5 +1,6 @@
 .sidebar {
   padding: 0.5em;
+  overflow: auto;
 }
 
 .sidebar__header {
@@ -27,4 +28,8 @@
 
 .sidebar__note {
   font-size: 0.8rem;
+}
+
+.split {
+  display: flex;
 }

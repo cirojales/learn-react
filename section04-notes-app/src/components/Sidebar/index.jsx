@@ -11,7 +11,7 @@ export default function Sidebar(props) {
         }`}
         onClick={() => props.setCurrentNoteId(note.id)}
       >
-        Note {index + 1}
+        {note.body.split("\n")[0]}
       </h1>
     );
   });

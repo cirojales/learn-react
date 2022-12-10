@@ -29,6 +29,9 @@
 .sidebar__note {
   font-size: 0.8rem;
   padding: 0.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sidebar__note--selected {

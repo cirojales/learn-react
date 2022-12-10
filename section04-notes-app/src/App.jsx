@@ -13,10 +13,11 @@ export default function App() {
     (notes[0] && notes[0].id) || ""
   );
 
+  // console.log(notes[0]);
+
   function createNewNote() {
     const newNote = {
       id: nanoid(),
-      // id: notes.length + 1,
       body: "# Type your markdown note's title here",
     };
     setNotes((previousNotes) => {
@@ -44,7 +45,13 @@ export default function App() {
     setNotes((previousNotes) => {
       return previousNotes.filter((note) => note.id !== noteId);
     });
-    setCurrentNoteId((notes[0] && notes[0].id) || "");
+    setCurrentNoteId(() => {
+      return notes.length === 1
+        ? ""
+        : notes[0].id === currentNoteId
+        ? notes[1].id
+        : notes[0].id;
+    });
   }
 
   return (

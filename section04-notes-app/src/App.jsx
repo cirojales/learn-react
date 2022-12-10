@@ -37,7 +37,13 @@ export default function App() {
   }
 
   function findCurrentNote() {
-    return notes.find((note) => note.id === currentNoteId);
+    return notes.find((note) => note.id === currentNoteId) ?? "";
+  }
+
+  function deleteNote(noteId) {
+    setNotes((previousNotes) => {
+      return previousNotes.filter((note) => note.id !== noteId);
+    });
   }
 
   return (
@@ -49,6 +55,7 @@ export default function App() {
             createNewNote={createNewNote}
             setCurrentNoteId={setCurrentNoteId}
             currentNoteId={currentNoteId}
+            deleteNote={deleteNote}
           />
           <Editor updateNote={updateNote} currentNote={findCurrentNote()} />
         </Split>

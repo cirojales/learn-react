@@ -26,12 +26,30 @@
   font-size: 1.2rem;
 }
 
-.sidebar__note {
+.sidebar__note__title {
   font-size: 0.8rem;
   padding: 0.5em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  /* display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; */
+}
+
+.sidebar__note {
+  display: flex;
+  gap: 1em;
+}
+
+.sidebar__note__btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+.sidebar__note:hover .sidebar__note__btn {
+  display: block;
 }
 
 .sidebar__note--selected {
@@ -61,4 +79,38 @@
   color: white;
   border-radius: 3px;
   padding: 0.5rem;
+}
+
+.trash-solid.icon {
+  color: #000;
+  margin-left: 5px;
+  margin-top: 7px;
+  width: 9px;
+  height: 10px;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+  border-radius: 0 0 2px 2px;
+  background-color: currentColor;
+}
+
+.trash-solid.icon:before {
+  content: "";
+
+  width: 17px;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.trash-solid.icon:after {
+  content: "";
+  left: 0px;
+  top: -5px;
+  width: 7px;
+  height: 2px;
+  border-left: solid 1px currentColor;
+  border-right: solid 1px currentColor;
+  border-top: solid 1px currentColor;
+  background-color: currentColor;
+  border-radius: 4px 4px 0 0;
 }

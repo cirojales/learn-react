@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Sidebar from "./components/Sidebar";
 import Split from "react-split";
 import Editor from "./components/Editor";
+import { nanoid } from "nanoid";
 
 export default function App() {
-  const [notes, setNotes] = useState([]);
-  const [currentNoteId, setCurrentNoteId] = useState(notes[0] ?? "");
-  console.log(notes);
+  const [notes, setNotes] = useState(
+    () => JSON.parse(localStorage.getItem("notes")) ?? []
+  );
+
+  const [currentNoteId, setCurrentNoteId] = useState(
+    (notes[0] && notes[0].id) || ""
+  );
 
   function createNewNote() {
     const newNote = {
-      id: notes.length + 1,
+      id: nanoid(),
+      // id: notes.length + 1,
       body: "# Type your markdown note's title here",
     };
     setNotes((previousNotes) => {
@@ -18,6 +24,10 @@ export default function App() {
     });
     setCurrentNoteId(newNote.id);
   }
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   function updateNote(text) {
     setNotes((previousNotes) =>

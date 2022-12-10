@@ -44,12 +44,13 @@ export default function App() {
     setNotes((previousNotes) => {
       return previousNotes.filter((note) => note.id !== noteId);
     });
+    setCurrentNoteId((notes[0] && notes[0].id) || "");
   }
 
   return (
     <>
       {notes.length > 0 ? (
-        <Split sizes={[30, 70]} className="split">
+        <Split sizes={[30, 70]} className="split" gutterSize={0}>
           <Sidebar
             notes={notes}
             createNewNote={createNewNote}

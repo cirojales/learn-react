@@ -15,7 +15,11 @@ export default function Sidebar(props) {
           {note.body.split("\n")[0]}
         </h1>
         <button
-          className="sidebar__note__btn"
+          className={`sidebar__note__btn ${
+            note.id === props.currentNoteId
+              ? "sidebar__note__btn--selected"
+              : "sidebar__note__btn"
+          }`}
           onClick={() => props.deleteNote(note.id)}
         >
           <span class="material-symbols-outlined">delete</span>

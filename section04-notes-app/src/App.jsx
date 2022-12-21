@@ -57,7 +57,7 @@ export default function App() {
   return (
     <>
       {notes.length > 0 ? (
-        <Split sizes={[30, 70]} className="split" gutterSize={0}>
+        <Split sizes={[25, 75]} className="split" gutterSize={0}>
           <Sidebar
             notes={notes}
             createNewNote={createNewNote}

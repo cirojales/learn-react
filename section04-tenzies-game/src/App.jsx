@@ -1,3 +1,5 @@
+import Board from "./components/Board";
+
 export default function App() {
-  return <h2>Hello...</h2>;
+  return <Board />;
 }

@@ -1,0 +1,17 @@
+.board {
+  min-height: 90vh;
+  width: min(90vw, 750px);
+  background-color: #f5f5f5;
+  border-radius: 0.3em;
+  text-align: center;
+}
+
+.board__title {
+  font-size: 40px;
+  padding: 1em 0 0.5em;
+}
+
+.board__instruction {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}

@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
-body {
+body,
+h1,
+p {
   margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  border: 10px solid #0b2434;
+  background-color: #0b2434;
+  font-family: "Karla", sans-serif;
 }
